@@ -1,0 +1,155 @@
+:py:mod:`modelcr`
+=================
+
+.. py:module:: modelcr
+
+.. autoapi-nested-parse::
+
+   Summary
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   modelcr.PickleWorker
+   modelcr.Table
+   modelcr.TestInitPickleWorker
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   modelcr.check_file
+
+
+
+.. py:function:: check_file(file)
+
+   Summary
+
+   Args:
+       file (str): filename for model
+
+   Raises:
+       ValueError: Wrong Type
+
+
+.. py:class:: PickleWorker(file)
+
+   Summary
+       
+
+   .. py:method:: read_from_file(self)
+
+      Summary
+
+      Returns:
+          obj: get model from file
+
+
+   .. py:method:: write_to_file(self, data)
+
+      Summary
+
+      Args:
+          data (obj): model for writing
+
+      Returns:
+          obj: put model to file
+
+
+
+.. py:class:: Table(model, file)
+
+   Summary
+       
+
+   .. py:method:: save(self, model_object)
+
+      Summary
+
+      Args:
+          model_object (obj): 
+
+      Raises:
+          ValueError: wrong type
+
+
+   .. py:method:: list_all(self)
+
+      Summary
+
+      Returns:
+          list: list of objects
+
+
+   .. py:method:: read(self, number)
+
+      Summary
+
+      Args:
+          number (int): model which you choose
+
+      Returns:
+          obj:  object that you choose from list
+
+
+   .. py:method:: update(self, number, new_params)
+
+      Summary
+
+      Args:
+          number (int): model which you choose
+          new_params (str): new fields for obj
+
+
+   .. py:method:: delete(self, number)
+
+      Summary
+
+      Args:
+          number (int): model which you choose
+
+
+
+.. py:class:: TestInitPickleWorker(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Testing
+       
+
+   .. py:method:: test_empty(self)
+
+      Summary
+              
+
+
+   .. py:method:: test_uncorrert1(self)
+
+      Summary
+              
+
+
+   .. py:method:: test_uncorrert2(self)
+
+      Summary
+              
+
+
+   .. py:method:: test_uncorrert3(self)
+
+      Summary
+              
+
+
+
